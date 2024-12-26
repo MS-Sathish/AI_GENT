@@ -72,7 +72,7 @@ export function createDev (t: TFunction): LinkOption[] {
       text: t('rpc.dev.local', 'Local Node', { ns: 'apps-config' }),
       textBy: 'backend.ai-gents.io',
       ui: {},
-      value: 'ws://backend.ai-gents.io'
+      value: 'wss://backend.ai-gents.io'
     }
   ];
 }

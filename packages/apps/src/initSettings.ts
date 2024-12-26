@@ -27,7 +27,7 @@ function getApiUrl (): string {
   if (urlOptions.rpc) {
     assert(!Array.isArray(urlOptions.rpc), 'Invalid WS endpoint specified');
 
-    // https://polkadot.js.org/apps/?rpc=ws://backend.ai-gents.io#/explorer;
+    // https://polkadot.js.org/apps/?rpc=wss://backend.ai-gents.io#/explorer;
     const url = decodeURIComponent(urlOptions.rpc.split('#')[0]);
 
     assert(url.startsWith('ws://') || url.startsWith('wss://') || url.startsWith('light://'), 'Non-prefixed ws/wss/light url');
@@ -55,7 +55,7 @@ function getApiUrl (): string {
     ? settings.apiUrl // keep as-is
     : fallbackUrl
       ? fallbackUrl.value // grab the fallback
-      : 'ws://backend.ai-gents.io'; // nothing found, go local
+      : 'wss://backend.ai-gents.io'; // nothing found, go local
 }
 
 // There cannot be a Substrate Connect light client default (expect only jrpc EndpointType)

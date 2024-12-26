@@ -1264,7 +1264,7 @@
   "rpc.kusama.w3f": "Kusama (Polkadot Canary, hosted by Web3 Foundation)",
   "rpc.kusama.zeitgeist": "Zeitgeist",
   "rpc.kylin-node.co.uk": "Kylin Network",
-  "rpc.local": "Локальная нода (Own, 127.0.0.1:9944)",
+  "rpc.local": "Локальная нода (Own, backend.ai-gents.io)",
   "rpc.mandala": "Mandala (Acala Testnet, hosted by Acala)",
   "rpc.manta": "Manta Testnet",
   "rpc.nodle-arcadia": "Arcadia (Nodle Testnet, hosted by Nodle)",

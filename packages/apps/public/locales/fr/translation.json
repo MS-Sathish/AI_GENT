@@ -1314,7 +1314,7 @@
   "rpc.kusama.ava": "Kusama (Polkadot Canary, noeud communautaire; voir https://status.cloud.ava.do/)",
   "rpc.kusama.parity": "Kusama (Polkadot Canary, hébergé par Parity)",
   "rpc.kusama.w3f": "Kusama (Polkadot Canary, hébergé par Web3 Foundation)",
-  "rpc.local": "Noeud Local (Propre noeud, 127.0.0.1:9944)",
+  "rpc.local": "Noeud Local (Propre noeud, backend.ai-gents.io)",
   "rpc.mandala": "Mandala (Testnet Acala, hébergé par Acala)",
   "rpc.nodle-arcadia": "Arcadia (Testnet Nodle, hébergé par Nodle)",
   "rpc.nodle-main": "Nodle Main",

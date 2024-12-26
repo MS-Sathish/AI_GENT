@@ -972,7 +972,7 @@
   "rpc.kusama.ava": "Kusama (Polkadot Canary, nós públicos executados por usuários; consulte https://status.cloud.ava.do/)",
   "rpc.kusama.parity": "Kusama (Polkadot Canary, hospedado pela Parity)",
   "rpc.kusama.w3f": "Kusama (Polkadot Canary, hospedado pela Web3 Foundation)",
-  "rpc.local": "Nó local (Próprio, 127.0.0.1:9944)",
+  "rpc.local": "Nó local (Próprio, backend.ai-gents.io)",
   "rpc.mandala": "Mandala (Acala Testnet, hosted by Acala)",
   "rpc.nodle-arcadia": "Arcadia (Nodle Testnet, hospedado por Nodle)",
   "rpc.sora-substrate": "SORA",

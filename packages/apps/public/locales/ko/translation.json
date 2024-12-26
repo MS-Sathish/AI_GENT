@@ -1276,7 +1276,7 @@
   "rpc.kusama.ava": "Kusama (폴카닷 카나리넷, 유저가 운영하는 노드들; https://status.cloud.ava.do/를 참고하면 볼 수 있음)",
   "rpc.kusama.parity": "Kusama (폴카닷 카나리넷, Parity가 운영함)",
   "rpc.kusama.w3f": "Kusama (폴카닷 카나리넷, Web3재단이 운영함)",
-  "rpc.local": "로컬 노드 (본인이 127.0.0.1:9944에서 운영함)",
+  "rpc.local": "로컬 노드 (본인이 backend.ai-gents.io에서 운영함)",
   "rpc.mandala": "만달라(Acala 테스트넷, Acala가 운영함)",
   "rpc.nodle-arcadia": "Arcadia (Nodle 테스트넷, Nodle이 운영함)",
   "rpc.nodle-main": "노들 메인",

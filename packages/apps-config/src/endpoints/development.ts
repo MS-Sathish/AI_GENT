@@ -70,9 +70,9 @@ export function createDev (t: TFunction): LinkOption[] {
       dnslink: 'local',
       info: 'local',
       text: t('rpc.dev.local', 'Local Node', { ns: 'apps-config' }),
-      textBy: '127.0.0.1:9944',
+      textBy: 'backend.ai-gents.io',
       ui: {},
-      value: 'ws://127.0.0.1:9944'
+      value: 'ws://backend.ai-gents.io'
     }
   ];
 }

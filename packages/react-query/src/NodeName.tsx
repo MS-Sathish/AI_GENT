@@ -11,8 +11,8 @@ interface Props {
   label?: React.ReactNode;
 }
 
-function NodeName ({ children, className = '', label }: Props): React.ReactElement<Props> {
-  const { systemName } = useApi();
+function NodeName ({ className = '' }: Props): React.ReactElement<Props> {
+  // const { systemName } = useApi();
 
   return (
     <div className={className}>

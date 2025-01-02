@@ -12,7 +12,7 @@ export const PolkadotJs: Known = {
     firefox: 'https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension/'
   },
   desc: 'Basic account injection and signer',
-  name: 'polkadot-js extension',
+  name: 'AIGENT',
   ui: {
     // Don't copy this line as-is :) The '|| empty' here is just there for a build
     // check, aka it actually has no effect (the first part is always defined)

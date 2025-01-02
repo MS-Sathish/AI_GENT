@@ -780,6 +780,7 @@
   "The amount you wish to be tipped for your bid.": "",
   "The amount you wish to lock for the duration. It needs to be more than the gilt minimum.": "",
   "The amount you wish to lock for the duration. It needs to be more than the nis minimum.": "",
+  "The associated deposit for this proposal should be more than the minimum on-chain deposit required. It will be locked until the proposal passes.": "",
   "The associated deposit for this proposal should be more then the minimum on-chain deposit required. It will be locked until the proposal passes.": "",
   "The balance associated with the vote will be locked as per the conviction specified and will not be available for transfer during this period.": "",
   "The beneficiary will have access to the transferred amount when the transaction is included in a block.": "",

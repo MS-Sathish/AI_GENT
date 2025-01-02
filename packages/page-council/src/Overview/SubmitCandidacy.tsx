@@ -27,24 +27,24 @@ function SubmitCandidacy ({ electionsInfo }: Props): React.ReactElement<Props> |
     <>
       {isOpen && (
         <Modal
-          header={t('Submit your council candidacy')}
+          header={<span style={{ color: 'white' }}>{t('Submit your council candidacy')}</span>}
           onClose={onClose}
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t('This account will appear in the list of candidates. With enough votes in an election, it will become either a runner-up or a council member.')}>
+            <Modal.Columns hint={<span style={{ color: 'white' }}>{t('This account will appear in the list of candidates. With enough votes in an election, it will become either a runner-up or a council member.')}</span>}>
               <InputAddress
-                label={t('candidate account')}
+                label={<span style={{ color: 'white' }}>{t('candidate account')}</span>}
                 onChange={setAccountId}
                 type='account'
               />
             </Modal.Columns>
             {api.consts[modLocation] && (
-              <Modal.Columns hint={t('The bond will be reserved for the duration of your candidacy and membership.')}>
+              <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The bond will be reserved for the duration of your candidacy and membership.')}</span>}>
                 <InputBalance
                   defaultValue={api.consts[modLocation as 'council']?.candidacyBond as u128}
                   isDisabled
-                  label={t('candidacy bond')}
+                  label={<span style={{ color: 'white' }}>{t('candidacy bond')}</span>}
                 />
               </Modal.Columns>
             )}
@@ -67,7 +67,7 @@ function SubmitCandidacy ({ electionsInfo }: Props): React.ReactElement<Props> |
       <Button
         icon='plus'
         isDisabled={!electionsInfo}
-        label={t('Submit candidacy')}
+        label={<span style={{ color: 'white' }}>{t('Submit candidacy')}</span>}
         onClick={onOpen}
       />
     </>

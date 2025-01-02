@@ -81,7 +81,7 @@ function Summary ({ avgStaked, className, lastEra, lowStaked, minNominated, minN
         </CardSummary>
       </section>
       <section className='media--800'>
-        <CardSummary label={t('returns')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{`${t('returns')}`}</span>}>
           {totalIssuance && (stakedReturn > 0)
             ? Number.isFinite(stakedReturn)
               ? <>{stakedReturn.toFixed(1)}{percent}</>

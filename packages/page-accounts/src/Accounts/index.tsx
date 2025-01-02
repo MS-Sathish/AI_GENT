@@ -368,7 +368,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
           )}
           <Button
             icon='qrcode'
-            label={t('From Qr')}
+            label={<span style={{ color: 'white' }}>{t('From Qr')}</span>}
             onClick={toggleQr}
           />
           {isLedgerEnabled && (

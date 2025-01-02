@@ -31,7 +31,7 @@ function Labelled ({ children, className = '', isFull, isHidden, isOuter, isSmal
 
   return (
     <StyledDiv className={`${className} ui--Labelled ${isSmall ? 'isSmall' : ''} ${isFull ? 'isFull' : ''} ${isOuter ? 'isOuter' : ''}`}>
-      <label>{withEllipsis
+      <label style={{color:'#737373'}}>{withEllipsis
         ? <div className='withEllipsis'>{label}</div>
         : label
       }</label>

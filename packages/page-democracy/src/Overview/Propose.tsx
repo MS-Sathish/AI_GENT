@@ -77,9 +77,17 @@ function Propose ({ className = '', onClose }: Props): React.ReactElement<Props>
       size='large'
     >
       <Modal.Content>
-        <Modal.Columns hint={t('The proposal will be registered from this account and the balance lock will be applied here.')}>
+        <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('The proposal will be registered from this account and the balance lock will be applied here.')}
+    </span>
+  }>
           <InputAddress
-            label={t('send from account')}
+            label={
+              <span style={{ color: 'white' }}>
+                {t('send from account')}
+              </span>
+            }
             labelExtra={
               <Available
                 label={<span className='label'>{t('transferable')}</span>}
@@ -93,8 +101,8 @@ function Propose ({ className = '', onClose }: Props): React.ReactElement<Props>
         <Modal.Columns
           hint={
             <>
-              <p>{t('The hash of the preimage for the proposal as previously submitted or intended.')}</p>
-              <p>{t('The length value will be auto-populated from the on-chain value if it is found.')}</p>
+              <p style={{ color: 'white' }}>{t('The hash of the preimage for the proposal as previously submitted or intended.')}</p>
+              <p style={{ color: 'white' }}>{t('The length value will be auto-populated from the on-chain value if it is found.')}</p>
             </>
           }
         >
@@ -115,7 +123,11 @@ function Propose ({ className = '', onClose }: Props): React.ReactElement<Props>
             value={imageLen}
           />
         </Modal.Columns>
-        <Modal.Columns hint={t('The associated deposit for this proposal should be more then the minimum on-chain deposit required. It will be locked until the proposal passes.')}>
+        <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('The associated deposit for this proposal should be more than the minimum on-chain deposit required. It will be locked until the proposal passes.')}
+    </span>
+  }>
           <InputBalance
             defaultValue={api.consts.democracy.minimumDeposit}
             isError={!hasMinLocked}
@@ -125,7 +137,11 @@ function Propose ({ className = '', onClose }: Props): React.ReactElement<Props>
           <InputBalance
             defaultValue={api.consts.democracy.minimumDeposit}
             isDisabled
-            label={t('minimum deposit')}
+            label={
+              <span style={{ color: 'white' }}>
+                {t('send from account')}
+              </span>
+            }
           />
         </Modal.Columns>
       </Modal.Content>

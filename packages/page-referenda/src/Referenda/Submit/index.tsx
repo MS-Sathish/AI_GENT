@@ -160,7 +160,11 @@ function Submit ({ className = '', isMember, members, palletReferenda, tracks }:
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t('The proposal will be registered from this account and the balance lock will be applied here.')}>
+            <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('The proposal will be registered from this account and the balance lock will be applied here.')}
+    </span>
+  }>
               <InputAddress
                 filter={members}
                 label={t('propose from account')}

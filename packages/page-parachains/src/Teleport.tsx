@@ -136,7 +136,11 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
       <Modal.Content>
         <Modal.Columns hint={t('The transferred balance will be subtracted (along with fees) from the sender account.')}>
           <InputAddress
-            label={t('send from account')}
+            label={
+              <span style={{ color: 'white' }}>
+                {t('send from account')}
+              </span>
+            }
             labelExtra={
               <Available
                 label={t('transferable')}

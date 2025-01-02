@@ -100,7 +100,7 @@ function BountyCreate () {
             <Modal.Columns hint={t('This account will propose the bounty. Bond amount will be reserved on its balance.')}>
               <InputAddress
                 isError={!hasFunds}
-                label={t('submit with account')}
+                label={<span style={{ color: 'white' }}>{t('submit with account')}</span>}
                 onChange={setAccountId}
                 type='account'
                 withLabel

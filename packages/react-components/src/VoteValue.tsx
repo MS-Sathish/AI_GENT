@@ -125,11 +125,11 @@ function VoteValue ({ accountId, autoFocus, isReferenda, label, noDefault, onCha
       }
       isDisabled={isDisabled}
       isZeroable
-      label={label || t('vote value')}
+      label={<span style={{ color: 'white' }}>{label || t('vote value')}</span>}
       labelExtra={
         <BalanceVoting
           isReferenda={isReferenda}
-          label={<label>{t('voting balance')}</label>}
+          label={<label style={{ color: 'white' }}>{t('voting balance')}</label>}
           params={accountId}
         />
       }

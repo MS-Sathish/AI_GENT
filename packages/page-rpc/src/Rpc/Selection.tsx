@@ -82,7 +82,7 @@ function Selection ({ queueRpc }: Props): React.ReactElement<Props> {
     <section className='rpc--Selection'>
       <InputRpc
         defaultValue={defaultMethod}
-        label={t('call the selected endpoint')}
+        label={<span style={{ color: 'black' }}>{t('call the selected endpoint')}</span>}
         onChange={_onChangeMethod}
       />
       <Params

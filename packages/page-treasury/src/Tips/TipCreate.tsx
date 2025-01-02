@@ -60,7 +60,7 @@ function TipCreate ({ members }: Props): React.ReactElement<Props> | null {
           <Modal.Content>
             <Modal.Columns hint={t('Use this account to request the tip from. This can be a normal or council account.')}>
               <InputAddress
-                label={t('submit with account')}
+                label={<span style={{ color: 'white' }}>{t('submit with account')}</span>}
                 onChange={setAccountId}
                 type='account'
                 withLabel

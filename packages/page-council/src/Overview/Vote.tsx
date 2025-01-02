@@ -82,19 +82,19 @@ function Vote ({ electionsInfo }: Props): React.ReactElement<Props> | null {
       />
       {isVisible && (
         <Modal
-          header={t('Vote for current candidates')}
+          header={<span style={{ color: 'white' }}>{t('Vote for current candidates')}</span>}
           onClose={toggleVisible}
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t('The vote will be recorded for the selected account.')}>
+            <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The vote will be recorded for the selected account.')}</span>}>
               <InputAddress
-                label={t('voting account')}
+                label={<span style={{ color: 'white' }}>{t('voting account')}</span>}
                 onChange={setAccountId}
                 type='account'
               />
             </Modal.Columns>
-            <Modal.Columns hint={t('The value associated with this vote. The amount will be locked (not available for transfer) and used in all subsequent elections.')}>
+            <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The value associated with this vote. The amount will be locked (not available for transfer) and used in all subsequent elections.')}</span>}>
               <VoteValue
                 accountId={accountId}
                 onChange={setVoteValue}
@@ -103,14 +103,14 @@ function Vote ({ electionsInfo }: Props): React.ReactElement<Props> | null {
             <Modal.Columns
               hint={
                 <>
-                  <p>{t('The votes for the members, runner-ups and candidates. These should be ordered based on your priority.')}</p>
-                  <p>{t('In calculating the election outcome, this prioritized vote ordering will be used to determine the final score for the candidates.')}</p>
+                  <p style={{ color: 'white' }}>{t('The votes for the members, runner-ups and candidates. These should be ordered based on your priority.')}</p>
+                  <p style={{ color: 'white' }}>{t('In calculating the election outcome, this prioritized vote ordering will be used to determine the final score for the candidates.')}</p>
                 </>
               }
             >
               <InputAddressMulti
                 available={available}
-                availableLabel={t('council candidates')}
+                availableLabel={<span style={{ color: 'white' }}>{t('council candidates')}</span>}
                 defaultValue={defaultVotes}
                 maxCount={MAX_VOTES}
                 onChange={setVotes}
@@ -118,11 +118,11 @@ function Vote ({ electionsInfo }: Props): React.ReactElement<Props> | null {
               />
             </Modal.Columns>
             {bondValue && (
-              <Modal.Columns hint={t('The amount will be reserved for the duration of your vote')}>
+              <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The amount will be reserved for the duration of your vote')}</span>}>
                 <InputBalance
                   defaultValue={bondValue}
                   isDisabled
-                  label={t('voting bond')}
+                  label={<span style={{ color: 'white' }}>{t('voting bond')}</span>}
                 />
               </Modal.Columns>
             )}

@@ -134,13 +134,13 @@ function BTreeMapParam ({ className = '', defaultValue, isDisabled = false, labe
         <div className='ui--Param-BTreeMap-buttons'>
           <Button
             icon='plus'
-            label={t('Add item')}
+            label={<span style={{ color: 'white' }}>{t('Add item')}</span>}
             onClick={_rowAdd}
           />
           <Button
             icon='minus'
             isDisabled={values.length === 0}
-            label={t('Remove item')}
+            label={<span style={{ color: 'white' }}>{t('Remove item')}</span>}
             onClick={_rowRemove}
           />
         </div>

@@ -47,17 +47,17 @@ function Propose ({ className }: Props): React.ReactElement<Props> | null {
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t('This account will make the proposal and be responsible for the bond.')}>
+            <Modal.Columns hint={<span style={{ color: 'white' }}>{t('This account will make the proposal and be responsible for the bond.')}</span>}>
               <InputAddress
-                label={t('submit with account')}
+                label={<span style={{ color: 'white' }}>{t('submit with account')}</span>}
                 onChange={setAccountId}
                 type='account'
                 withLabel
               />
             </Modal.Columns>
-            <Modal.Columns hint={t('The beneficiary will receive the full amount if the proposal passes.')}>
+            <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The beneficiary will receive the full amount if the proposal passes.')}</span>}>
               <InputAddress
-                label={t('beneficiary')}
+                label={<span style={{ color: 'white' }}>{t('beneficiary')}</span>}
                 onChange={setBeneficiary}
                 type='allPlus'
               />
@@ -65,10 +65,10 @@ function Propose ({ className }: Props): React.ReactElement<Props> | null {
             <Modal.Columns
               hint={
                 <>
-                  <p>{t('The value is the amount that is being asked for and that will be allocated to the beneficiary if the proposal is approved.')}</p>
+                  <p style={{ color: 'white' }}>{t('The value is the amount that is being asked for and that will be allocated to the beneficiary if the proposal is approved.')}</p>
                   {bondMax
-                    ? <p>{t('Of the beneficiary amount, no less than the minimum bond amount and no more than maximum on-chain bond would need to be put up as collateral. This is calculated from {{bondPercentage}} of the requested amount.', { replace: { bondPercentage } })}</p>
-                    : <p>{t('Of the beneficiary amount, no less than the minimum bond amount would need to be put up as collateral. This is calculated from {{bondPercentage}} of the requested amount.', { replace: { bondPercentage } })}</p>
+                    ? <p style={{ color: 'white' }}>{t('Of the beneficiary amount, no less than the minimum bond amount and no more than maximum on-chain bond would need to be put up as collateral. This is calculated from {{bondPercentage}} of the requested amount.', { replace: { bondPercentage } })}</p>
+                    : <p style={{ color: 'white' }}>{t('Of the beneficiary amount, no less than the minimum bond amount would need to be put up as collateral. This is calculated from {{bondPercentage}} of the requested amount.', { replace: { bondPercentage } })}</p>
                   }
                 </>
               }
@@ -79,20 +79,20 @@ function Propose ({ className }: Props): React.ReactElement<Props> | null {
                 onChange={setValue}
               />
               <Static
-                label={t('proposal bond')}
+                label={<span style={{ color: 'white' }}>{t('proposal bond')}</span>}
               >
                 {bondPercentage}
               </Static>
               <InputBalance
                 defaultValue={bondMin}
                 isDisabled
-                label={t('minimum bond')}
+                label={<span style={{ color: 'white' }}>{t('minimum bond')}</span>}
               />
               {bondMax && (
                 <InputBalance
                   defaultValue={bondMax}
                   isDisabled
-                  label={t('maximum bond')}
+                  label={<span style={{ color: 'white' }}>{t('maximum bond')}</span>}
                 />
               )}
               <MarkWarning content={t('Be aware that once submitted the proposal will be put to a vote. If the proposal is rejected due to a lack of info, invalid requirements or non-benefit to the network as a whole, the full bond posted (as describe above) will be lost.')} />

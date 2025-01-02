@@ -64,7 +64,7 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
               ? (
                 <CardSummary
                   className={className}
-                  label={eraLabel}
+                  label={<span style={{ color: 'white' }}>{eraLabel}</span>}
                   progress={{
                     isBlurred: !(sessionInfo && forcing),
                     total: sessionInfo && forcing
@@ -84,7 +84,7 @@ function SummarySession ({ className, withEra = true, withSession = true }: Prop
               : (
                 <CardSummary
                   className={className}
-                  label={eraLabel}
+                  label={<span style={{ color: 'white' }}>{eraLabel}</span>}
                 >
                   #{sessionInfo
                     ? formatNumber(sessionInfo.activeEra)

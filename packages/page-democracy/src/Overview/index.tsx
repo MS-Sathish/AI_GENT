@@ -40,7 +40,7 @@ function Overview ({ className }: Props): React.ReactElement<Props> {
         )}
         <Button
           icon='plus'
-          label={t('Submit proposal')}
+          label={<span style={{ color: 'white' }}>{t('Submit proposal')}</span>}
           onClick={togglePropose}
         />
       </Button.Group>

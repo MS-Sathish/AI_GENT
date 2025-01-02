@@ -40,30 +40,30 @@ function BannerExtension (): React.ReactElement | null {
 
       return (
         <Banner type='warning'>
-          <p style={{ color: 'white' }}>
+          <p style={{ color: 'black' }}>
             {upgradableCount === 1
               ? t('You have 1 extension that needs to be updated with the latest chain properties in order to display the correct information for the chain you are connected to and to use a Ledger device.')
               : t('You have {{upgradableCount}} extensions that need to be updated with the latest chain properties in order to display the correct information for the chain you are connected to and to use a Ledger device.', { replace: { upgradableCount } })
             }
-            <span style={{ color: 'white' }}>{t(' This update includes chain metadata and chain properties.')}</span>
+            <span style={{ color: 'black' }}>{t(' This update includes chain metadata and chain properties.')}</span>
           </p>
-          <p style={{ color: 'white' }}><Trans key='extensionUpgrade'>Visit your <a href='#/settings/metadata'>settings page</a> to apply the updates to the injected extensions.</Trans></p>
+          <p style={{ color: 'black' }}><Trans key='extensionUpgrade'>Visit your <a href='#/settings/metadata'>settings page</a> to apply the updates to the injected extensions.</Trans></p>
         </Banner>
       );
     }
 
     return (
       <Banner type='warning'>
-        <p style={{ color: 'white' }}>{t('One or more extensions are detected in your browser, however no accounts has been injected.')}</p>
-        <p style={{ color: 'white' }}>{t('Ensure that the extension has accounts, some accounts are visible globally and available for this chain and that you gave the application permission to access accounts from the extension to use them.')}</p>
-        <p style={{ color: 'white' }}>{phishing.current}</p>
+        <p style={{ color: 'black' }}>{t('One or more extensions are detected in your browser, however no accounts has been injected.')}</p>
+        <p style={{ color: 'black' }}>{t('Ensure that the extension has accounts, some accounts are visible globally and available for this chain and that you gave the application permission to access accounts from the extension to use them.')}</p>
+        <p style={{ color: 'black' }}>{phishing.current}</p>
       </Banner>
     );
   }
 
   return (
     <Banner type='warning'>
-      <p style={{ color: 'white' }}>{t('It is recommended that you create/store your accounts securely and externally from the app. On {{yourBrowser}} the following browser extensions are available for use -', {
+      <p style={{ color: 'black' }}>{t('It is recommended that you create/store your accounts securely and externally from the app. On {{yourBrowser}} the following browser extensions are available for use -', {
         replace: {
           yourBrowser: stringUpperFirst(browserName)
         }
@@ -80,14 +80,14 @@ function BannerExtension (): React.ReactElement | null {
         </li>
       ))
       }</ul>
-      <p style={{ color: 'white' }}>{t('Accounts injected from any of these extensions will appear in this application and be available for use. The above list is updated as more extensions with external signing capability become available.')}&nbsp;
+      <p style={{ color: 'black' }}>{t('Accounts injected from any of these extensions will appear in this application and be available for use. The above list is updated as more extensions with external signing capability become available.')}&nbsp;
         <a
           href='https://github.com/polkadot-js/extension'
           rel='noopener noreferrer'
           target='_blank'
         >{t('Learn more...')}</a>
       </p>
-      <p style={{ color: 'white' }}>{phishing.current}</p>
+      <p style={{ color: 'black' }}>{phishing.current}</p>
     </Banner>
   );
 }

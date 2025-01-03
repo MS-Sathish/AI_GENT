@@ -71,7 +71,7 @@ function Row ({ address, buttons, children, className = '', defaultName, details
                 />
               )
               : (
-                <div className='ui--Row-name'>
+                <div className='ui--Row-name' style={{color:'white'}}>
                   {
                     isEditableName
                       ? (

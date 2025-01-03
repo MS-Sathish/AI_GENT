@@ -114,7 +114,7 @@ function Create ({ onClose, onStatusChange }: Props): React.ReactElement<Props> 
 
   return (
     <Modal
-      header={t('Add an address')}
+    header={<span style={{ color: 'white' }}>{t('Add an address')}</span>}
       onClose={onClose}
     >
       <Modal.Content>

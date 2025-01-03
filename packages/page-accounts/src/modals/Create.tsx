@@ -244,7 +244,11 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
   return (
     <StyledModal
       className={className}
-      header={t('Add an account via seed {{step}}/{{STEPS_COUNT}}', { replace: { STEPS_COUNT, step } })}
+      header={
+        <span style={{ color: 'white' }}>
+          {t('Add an account via seed {{step}}/{{STEPS_COUNT}}', { replace: { STEPS_COUNT, step } })}
+        </span>
+      }
       onClose={onClose}
       size='large'
     >
@@ -259,7 +263,11 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
           />
         </Modal.Columns>
         {step === 1 && <>
-          <Modal.Columns hint={t('The secret seed value for this account. Ensure that you keep this in a safe place, with access to the seed you can re-create the account.')}>
+          <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('The secret seed value for this account. Ensure that you keep this in a safe place, with access to the seed you can re-create the account.')}
+    </span>
+  }>
             <TextArea
               isError={!isSeedValid}
               isReadOnly={seedType === 'dev'}
@@ -292,10 +300,14 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
           <Expander
             className='accounts--Creator-advanced'
             isPadded
-            summary={t('Advanced creation options')}
+            summary={<span style={{ color: 'white' }}>{t('Advanced creation options')}</span>}
           >
             {pairType !== 'ethereum' && (
-              <Modal.Columns hint={t('If you are moving accounts between applications, ensure that you use the correct type.')}>
+              <Modal.Columns hint={
+                <span style={{ color: 'white' }}>
+                  {t('If you are moving accounts between applications, ensure that you use the correct type.')}
+                </span>
+              }>
                 <Dropdown
                   defaultValue={pairType}
                   label={t('keypair crypto type')}
@@ -329,7 +341,11 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
                   />
                 )
                 : (
-                  <Modal.Columns hint={t('The derivation path allows you to create different accounts from the same base mnemonic.')}>
+                  <Modal.Columns hint={
+                    <span style={{ color: 'white' }}>
+                      {t('The derivation path allows you to create different accounts from the same base mnemonic.')}
+                    </span>
+                  }>
                     <Input
                       isDisabled={seedType === 'raw'}
                       isError={!!deriveValidation?.error}
@@ -358,9 +374,13 @@ function Create ({ className = '', onClose, onStatusChange, seed: propsSeed, typ
           </Expander>
           <Modal.Columns>
             <ExternalWarning />
-            <div className='saveToggle'>
+            <div className='saveToggle' style={{color:'white'}}>
               <Checkbox
-                label={<>{t('I have saved my mnemonic seed safely')}</>}
+                label={
+                  <span style={{ color: 'white' }}>
+                    {t('I have saved my mnemonic seed safely')}
+                  </span>
+                }
                 onChange={_toggleMnemonicSaved}
                 value={isMnemonicSaved}
               />

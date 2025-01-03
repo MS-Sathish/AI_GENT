@@ -40,7 +40,11 @@ const CreateAccountInputs = ({ name: { isNameValid, name }, onCommit, setName, s
 
   return (
     <>
-      <Modal.Columns hint={t('The name for this account and how it will appear under your addresses. With an on-chain identity, it can be made available to others.')}>
+      <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('The name for this account and how it will appear under your addresses. With an on-chain identity, it can be made available to others.')}
+    </span>
+  }>
         <Input
           className='full'
           isError={!isNameValid}

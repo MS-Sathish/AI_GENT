@@ -85,7 +85,7 @@ function Row ({ address, buttons, children, className = '', defaultName, details
               )
           )}
           {address && (
-            <div className={`ui--Row-address ${isShortAddr ? 'shortAddr' : ''}`}>
+            <div className={`ui--Row-address ${isShortAddr ? 'shortAddr' : ''}`} style={{color:'white'}}>
               {address.toString()}
             </div>
           )}

@@ -49,8 +49,8 @@ export default function PasswordInput ({ onChange, onEnter }: Props): React.Reac
     <Modal.Columns
       hint={
         <>
-          <p>{t('The password and password confirmation for this account. This is required to authenticate any transactions made and to encrypt the keypair.')}</p>
-          <p>{t('Ensure you are using a strong password for proper account protection.')}</p>
+          <p style={{color:'white'}}>{t('The password and password confirmation for this account. This is required to authenticate any transactions made and to encrypt the keypair.')}</p>
+          <p style={{color:'white'}}>{t('Ensure you are using a strong password for proper account protection.')}</p>
         </>
       }
     >

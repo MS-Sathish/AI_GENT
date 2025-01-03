@@ -134,18 +134,20 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
       size='large'
     >
       <Modal.Content>
-        <Modal.Columns hint={t('The transferred balance will be subtracted (along with fees) from the sender account.')}>
+        <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The transferred balance will be subtracted (along with fees) from the sender account.')}</span>}>
           <InputAddress
             label={
-              <span style={{ color: 'white' }}>
+              <span style={{ color: '	 #cccccc' }}>
                 {t('send from account')}
               </span>
             }
             labelExtra={
-              <Available
-                label={t('transferable')}
-                params={senderId}
-              />
+              <div style={{ color: '	 #cccccc' }}>
+                <Available
+                  label={t('transferable')}
+                  params={senderId}
+                />
+              </div>
             }
             onChange={setSenderId}
             type='account'
@@ -166,7 +168,7 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
         )}
         <Modal.Columns hint={t('The beneficiary will have access to the transferred amount when the transaction is included in a block.')}>
           <InputAddress
-            label={t('send to address')}
+            label={<span style={{ color: '#a5a5a5' }}>{t('send to address')}</span>}
             onChange={setRecipientId}
             type='allPlus'
           />

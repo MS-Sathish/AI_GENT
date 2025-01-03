@@ -68,7 +68,7 @@ function Propose ({ defaultThreshold = DEFAULT_THRESHOLD, defaultValue, filter, 
     <>
       {isOpen && (
         <Modal
-          header={t('Propose a committee motion')}
+          header={<span style={{ color: 'white' }}>{t('Propose a committee motion')}</span>}
           onClose={onClose}
         >
           <Modal.Content>
@@ -112,7 +112,7 @@ function Propose ({ defaultThreshold = DEFAULT_THRESHOLD, defaultValue, filter, 
       <Button
         icon='plus'
         isDisabled={!isMember}
-        label={t('Submit proposal')}
+        label={<span style={{ color: 'white' }}>{t('Submit proposal')}</span>}
         onClick={onOpen}
       />
     </>

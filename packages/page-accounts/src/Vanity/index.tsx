@@ -40,8 +40,8 @@ interface Results {
 
 const DEFAULT_MATCH = 'Some';
 const BOOL_OPTIONS = [
-  { text: 'No', value: false },
-  { text: 'Yes', value: true }
+  { text: <span style={{ color: 'black' }}>No</span>, value: false },
+  { text: <span style={{ color: 'black' }}>Yes</span>, value: true }
 ];
 
 function VanityApp ({ className = '', onStatusChange }: Props): React.ReactElement<Props> {
@@ -193,7 +193,7 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
           className='medium'
           isDisabled={isRunning}
           isError={!isMatchValid}
-          label={t('Search for')}
+          label={<span style={{ color: '#cccccc' }}>{t('Search for')}</span>}
           onChange={_onChangeMatch}
           onEnter={_toggleStart}
           value={match}
@@ -201,7 +201,7 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
         <Dropdown
           className='medium'
           isDisabled={isRunning}
-          label={t('case sensitive')}
+          label={<span style={{ color: '#cccccc' }}>{t('case sensitive')}</span>}
           onChange={setWithCase}
           options={BOOL_OPTIONS}
           value={withCase}
@@ -224,11 +224,7 @@ function VanityApp ({ className = '', onStatusChange }: Props): React.ReactEleme
               : 'sign-in-alt'
           }
           isDisabled={!isMatchValid}
-          label={
-            isRunning
-              ? t('Stop generation')
-              : t('Start generation')
-          }
+          label={<span style={{ color: 'white' }}>{isRunning ? t('Stop generation') : t('Start generation')}</span>}
           onClick={_toggleStart}
         />
       </Button.Group>

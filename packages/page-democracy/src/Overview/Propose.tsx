@@ -84,13 +84,13 @@ function Propose ({ className = '', onClose }: Props): React.ReactElement<Props>
   }>
           <InputAddress
             label={
-              <span style={{ color: 'white' }}>
+              <span style={{ color: '	 #cccccc' }}>
                 {t('send from account')}
               </span>
             }
             labelExtra={
               <Available
-                label={<span className='label'>{t('transferable')}</span>}
+                label={<span style={{ color: '	 #cccccc' }}>{t('transferable')}</span>}
                 params={accountId}
               />
             }
@@ -138,7 +138,7 @@ function Propose ({ className = '', onClose }: Props): React.ReactElement<Props>
             defaultValue={api.consts.democracy.minimumDeposit}
             isDisabled
             label={
-              <span style={{ color: 'white' }}>
+              <span style={{ color: '	 #cccccc' }}>
                 {t('send from account')}
               </span>
             }

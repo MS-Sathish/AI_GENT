@@ -127,7 +127,12 @@ function Signer ({ children, className = '' }: Props): React.ReactElement<Props>
       {currentItem && isVisible && (
         <StyledModal
           className={className}
-          header={<>{t('Authorize transaction')}{(queueSize === 1) ? undefined : <>&nbsp;1/{queueSize}</>}</>}
+          header={
+            <h2 style={{ color: 'white' }}>
+              {t('Authorize transaction')}
+              {queueSize === 1 ? undefined : <> &nbsp;1/{queueSize}</>}
+            </h2>
+          }
           key={currentItem.id}
           onClose={_onCancel}
           size='large'

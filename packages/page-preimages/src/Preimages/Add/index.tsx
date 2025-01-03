@@ -38,13 +38,13 @@ function Add ({ className, imageHash }: Props): React.ReactElement<Props> {
             <Modal.Columns hint={t('This account will pay the fees for the preimage, based on the size thereof.')}>
               <InputAddress
                 label={
-                  <span style={{ color: 'white' }}>
+                  <span style={{ color: '	 #cccccc' }}>
                     {t('send from account')}
                   </span>
                 }
                 labelExtra={
                   <Available
-                    label={<span className='label'>{t('transferable')}</span>}
+                    label={<span style={{ color: '	 #cccccc' }}>{t('transferable')}</span>}
                     params={accountId}
                   />
                 }

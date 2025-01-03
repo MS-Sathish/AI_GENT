@@ -383,7 +383,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
               {hasPalletMultisig && (
                 <Button
                   icon='plus'
-                  label={t('Multisig')}
+                  label={<span style={{ color: 'white' }}>{t('Multisig')}</span>}
                   onClick={toggleMultisig}
                 />
               )}

@@ -108,36 +108,38 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
   return (
     <StyledModal
       className='app--accounts-Modal'
-      header={t('Send funds')}
+      header={<span style={{ color: 'white' }}>{t('Send funds')}</span>}
       onClose={onClose}
       size='large'
     >
       <Modal.Content>
         <div className={className}>
-          <Modal.Columns hint={t('The transferred balance will be subtracted (along with fees) from the sender account.')}>
+          <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The transferred balance will be subtracted (along with fees) from the sender account.')}</span>}>
             <InputAddress
               defaultValue={propSenderId}
               isDisabled={!!propSenderId}
               label={
-                <span style={{ color: 'white' }}>
+                <span style={{ color: '	 #cccccc' }}>
                   {t('send from account')}
                 </span>
               }
               labelExtra={
-                <Available
-                  label={t('transferable')}
-                  params={propSenderId || senderId}
-                />
+                <div style={{ color: '	 #cccccc' }}>
+                  <Available
+                    label={t('transferable')}
+                    params={propSenderId || senderId}
+                  />
+                </div>
               }
               onChange={setSenderId}
               type='account'
             />
           </Modal.Columns>
-          <Modal.Columns hint={t('The beneficiary will have access to the transferred fees when the transaction is included in a block.')}>
+          <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The beneficiary will have access to the transferred fees when the transaction is included in a block.')}</span>}>
             <InputAddress
               defaultValue={propRecipientId}
               isDisabled={!!propRecipientId}
-              label={t('send to address')}
+              label={<span style={{ color: '#a5a5a5' }}>{t('send to address')}</span>}
               labelExtra={
                 <Available
                   label={t('transferable')}
@@ -151,7 +153,7 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
               <MarkError content={t('The recipient is associated with a known phishing site on {{url}}', { replace: { url: recipientPhish } })} />
             )}
           </Modal.Columns>
-          <Modal.Columns hint={t('If the recipient account is new, the balance needs to be more than the existential deposit. Likewise if the sending account balance drops below the same value, the account will be removed from the state.')}>
+          <Modal.Columns hint={<span style={{ color: 'white' }}>{t('If the recipient account is new, the balance needs to be more than the existential deposit. Likewise if the sending account balance drops below the same value, the account will be removed from the state.')}</span>}>
             {canToggleAll && isAll
               ? (
                 <InputBalance
@@ -175,20 +177,30 @@ function Transfer ({ className = '', onClose, recipientId: propRecipientId, send
                   <InputBalance
                     defaultValue={api.consts.balances?.existentialDeposit}
                     isDisabled
-                    label={t('existential deposit')}
+                    label={
+                      <span style={{ color: 'white' }}>
+                        {t('existential deposit')}
+                      </span>
+                    }
                   />
                 </>
               )
             }
           </Modal.Columns>
-          <Modal.Columns hint={t('With the keep-alive option set, the account is protected against removal due to low balances.')}>
+          <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('With the keep-alive option set, the account is protected against removal due to low balances.')}
+    </span>
+  }>
             {isFunction(api.tx.balances?.transferKeepAlive) && (
               <Toggle
                 className='typeToggle'
                 label={
-                  isProtected
-                    ? t('Transfer with account keep-alive checks')
-                    : t('Normal transfer without keep-alive checks')
+                  <span style={{ color: 'white' }}>
+                    {isProtected
+                      ? t('Transfer with account keep-alive checks')
+                      : t('Normal transfer without keep-alive checks')}
+                  </span>
                 }
                 onChange={setIsProtected}
                 value={isProtected}

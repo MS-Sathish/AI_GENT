@@ -188,24 +188,24 @@ function Developer ({ className = '', onStatusChange }: Props): React.ReactEleme
       </div>
       <div className='ui--row'>
         <div className='full'>
-          <Trans i18nKey='devConfig'><div className='help'>If you are a development team with at least a test network available, consider adding the types directly <a href='https://github.com/polkadot-js/apps/tree/master/packages/apps-config' rel='noopener noreferrer' target='_blank'>to the apps-config</a>, allowing out of the box operation for your spec &amp; chains, both for you and anybody trying to connect to it. This is not a replacement for your chain-specific UI, however doing so does help in allowing users to easily discover and use with zero-config.</div></Trans>
+          <Trans i18nKey='devConfig'><div className='help' style={{color:'white'}}>If you are a development team with at least a test network available, consider adding the types directly <a href='https://github.com/Teckas-Technologies/AI_GENT_/tree/main/packages/apps-config' rel='noopener noreferrer' target='_blank'>to the apps-config</a>, allowing out of the box operation for your spec &amp; chains, both for you and anybody trying to connect to it. This is not a replacement for your chain-specific UI, however doing so does help in allowing users to easily discover and use with zero-config.</div></Trans>
         </div>
       </div>
       <Button.Group>
         <CopyButton
-          label={t('Share')}
+          label={<span style={{ color: 'white' }}>{t('Share')}</span>}
           type={t('url')}
           value={sharedUrl}
         />
         <Button
           icon='sync'
-          label={t('Reset')}
+          label={<span style={{ color: 'white' }}>{t('Reset')}</span>}
           onClick={_clearTypes}
         />
         <Button
           icon='save'
           isDisabled={!isTypesValid || !isJsonValid}
-          label={t('Save')}
+          label={<span style={{ color: 'white' }}>{t('Save')}</span>}
           onClick={_saveDeveloper}
         />
       </Button.Group>

@@ -239,7 +239,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
         onSuccess={_onSuccess}
       />
     )}
-    <div style={{ display: 'flex', paddingBottom: '1.5rem' }}>
+    <div style={{ display: 'flex', paddingBottom: '1.5rem',color:'white' }}>
       <div className='uploadBtn'>
         <Button
           icon={'upload'}

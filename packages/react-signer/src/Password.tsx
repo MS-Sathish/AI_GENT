@@ -49,7 +49,7 @@ function Unlock ({ address, className, error, onChange, onEnter, tabIndex }: Pro
   return (
     <StyledModalColumns
       className={className}
-      hint={t('Unlock the sending account to allow signing of this transaction.')}
+      hint={<span style={{ color: 'white' }}>{t('Unlock the sending account to allow signing of this transaction.')}</span>}
     >
       <Password
         autoFocus

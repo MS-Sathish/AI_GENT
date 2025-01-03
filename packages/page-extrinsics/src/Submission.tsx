@@ -62,7 +62,7 @@ function Selection ({ className, defaultValue }: Props): React.ReactElement<Prop
   return (
     <div className={className}>
       <InputAddress
-        label={t('using the selected account')}
+        label={<span style={{ color: 'black' }}>{t('using the selected account')}</span>}
         labelExtra={
           <BalanceFree
             label={<label>{t('free balance')}</label>}
@@ -91,14 +91,14 @@ function Selection ({ className, defaultValue }: Props): React.ReactElement<Prop
           extrinsic={extrinsic}
           icon='sign-in-alt'
           isUnsigned
-          label={t('Submit Unsigned')}
+          label={<span style={{ color: 'white' }}>{t('Submit Unsigned')}</span>}
           withSpinner
         />
         <TxButton
           accountId={accountId}
           extrinsic={extrinsic}
           icon='sign-in-alt'
-          label={t('Submit Transaction')}
+          label={<span style={{ color: 'white' }}>{t('Submit Transaction')}</span>}
         />
       </Button.Group>
     </div>

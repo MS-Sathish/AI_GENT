@@ -77,7 +77,7 @@ function Decoded ({ className, extrinsic, isCall, payload, withData = true, with
           <Output
             isDisabled
             isTrimmed
-            label={t('encoded call data')}
+            label={<span style={{ color: 'white' }}>{t('encoded call data')}</span>}
             value={hex}
             withCopy
           />
@@ -85,7 +85,7 @@ function Decoded ({ className, extrinsic, isCall, payload, withData = true, with
         {withHash && (
           <Output
             isDisabled
-            label={t('encoded call hash')}
+            label={<span style={{ color: 'white' }}>{t('encoded call hash')}</span>}
             value={hash}
             withCopy
           />
@@ -95,7 +95,7 @@ function Decoded ({ className, extrinsic, isCall, payload, withData = true, with
         <DecodedInspect
           hex={hex}
           inspect={inspect}
-          label={t('encoding details')}
+          label={<span style={{ color: 'white' }}>{t('encoding details')}</span>}
         />
       </Columar.Column>
     </StyledColumar>

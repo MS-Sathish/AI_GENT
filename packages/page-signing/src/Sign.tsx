@@ -123,7 +123,7 @@ function Sign ({ className = '' }: Props): React.ReactElement<Props> {
         <InputAddress
           className='full'
           isInput={false}
-          label={t('account')}
+          label={<span style={{ color: 'black' }}>{t('account')}</span>}
           onChange={_onChangeAccount}
           type='account'
         />
@@ -142,11 +142,9 @@ function Sign ({ className = '' }: Props): React.ReactElement<Props> {
           <Static
             className='medium'
             label={<span style={{ color: 'white' }}>{t('hex input data')}</span>}
-            value={
-              isHexData
-                ? t('Yes')
-                : t('No')
-            }
+            value={<span style={{ color: 'white' }}>
+    {isHexData ? t('Yes') : t('No')}
+  </span>}
           />
         </div>
         <div className='ui--row'>

@@ -39,14 +39,14 @@ function PasswordStrength ({ className = '', value }: Props): React.ReactElement
       className={className}
       style={{ display: (value ? 'flex' : 'none') }}
     >
-      {t('weak')}
+      <span style={{ color: 'white' }}>{t('weak')}</span>
       <div className='ui--Strength-bar'>
         <div
           className='ui--Strength-bar-highlighted'
           style={style}
         />
       </div>
-      {t('strong')}
+      <span style={{ color: 'white' }}>{t('strong')}</span>
     </StyledDiv>
   );
 }

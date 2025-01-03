@@ -465,22 +465,22 @@ function TxSigned ({ className, currentItem, isQueueSubmit, queueSize, requestAd
                   />
                 )}
                 {isSubmit && !senderInfo.isMultiCall && innerTx && (
-                  <Modal.Columns hint={t('The full call data that can be supplied to a final call to multi approvals')}>
+                  <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The full call data that can be supplied to a final call to multi approvals')}</span>}>
                     <Output
                       isDisabled
                       isTrimmed
-                      label={t('multisig call data')}
+                      label={<span style={{ color: 'white' }}>{t('multisig call data')}</span>}
                       value={innerTx}
                       withCopy
                     />
                   </Modal.Columns>
                 )}
                 {isSubmit && innerHash && (
-                  <Modal.Columns hint={t('The call hash as calculated for this transaction')}>
+                  <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The call hash as calculated for this transaction')}</span>}>
                     <Output
                       isDisabled
                       isTrimmed
-                      label={t('call hash')}
+                      label={<span style={{ color: 'white' }}>{t('call hash')}</span>}
                       value={innerHash}
                       withCopy
                     />

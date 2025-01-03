@@ -262,7 +262,7 @@ function Address ({ currentItem, onChange, onEnter, passwordError, requestAddres
 
   return (
     <>
-      <Modal.Columns hint={t('The sending account that will be used to send this transaction. Any applicable fees will be paid by this account.')}>
+      <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The sending account that will be used to send this transaction. Any applicable fees will be paid by this account.')}</span>}>
         <InputAddress
           className='full'
           defaultValue={requestAddress}
@@ -283,7 +283,8 @@ function Address ({ currentItem, onChange, onEnter, passwordError, requestAddres
         </Modal.Columns>
       )}
       {multiInfo && (
-        <Modal.Columns hint={t('The signatory is one of the allowed accounts on the multisig, making a recorded approval for the transaction.')}>
+        <Modal.Columns hint={<span style={{ color: 'white' }}>{t('The signatory is one of the allowed accounts on the multisig, making a recorded approval for the transaction.')}</span>}
+>
           <InputAddress
             filter={multiInfo.whoFilter}
             label={t('multisig signatory')}
@@ -306,7 +307,7 @@ function Address ({ currentItem, onChange, onEnter, passwordError, requestAddres
         </Modal.Columns>
       )}
       {proxyInfo && (
-        <Modal.Columns hint={t('This could either be an approval for the hash or with full call details. The call as last approval triggers execution.')}>
+        <Modal.Columns hint={<span style={{ color: 'white' }}>{t('This could either be an approval for the hash or with full call details. The call as last approval triggers execution.')}</span>}>
           <Toggle
             className='tipToggle'
             isDisabled={proxyInfo.isProxied}
@@ -321,13 +322,15 @@ function Address ({ currentItem, onChange, onEnter, passwordError, requestAddres
         </Modal.Columns>
       )}
       {multiInfo && (
-        <Modal.Columns hint={t('This could either be an approval for the hash or with full call details. The call as last approval triggers execution.')}>
+        <Modal.Columns hint={<span style={{ color: 'white' }}>{t('This could either be an approval for the hash or with full call details. The call as last approval triggers execution.')}</span>}>
           <Toggle
             className='tipToggle'
             label={
-              isMultiCall
-                ? t('Multisig message with call (for final approval)')
-                : t('Multisig approval with hash (non-final approval)')
+              <span style={{ color: 'white' }}>
+                {isMultiCall
+                  ? t('Multisig message with call (for final approval)')
+                  : t('Multisig approval with hash (non-final approval)')}
+              </span>
             }
             onChange={setIsMultiCall}
             value={isMultiCall}

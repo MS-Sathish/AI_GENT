@@ -88,7 +88,7 @@ function Selection ({ onSubmit }: Props): React.ReactElement<Props> {
         <Button
           icon='sign-in-alt'
           isDisabled={!isValid || !method}
-          label={t('Submit Runtime call')}
+          label={<span style={{ color: 'white' }}>{t('Submit Runtime call')}</span>}
           onClick={_onSubmit}
         />
       </Button.Group>

@@ -32,7 +32,7 @@ function Labelled ({ children, className = '', isFull, isHidden, isOuter, isSmal
   return (
     <StyledDiv className={`${className} ui--Labelled ${isSmall ? 'isSmall' : ''} ${isFull ? 'isFull' : ''} ${isOuter ? 'isOuter' : ''}`}>
       <label style={{color:'#737373'}}>{withEllipsis
-        ? <div className='withEllipsis'>{label}</div>
+        ? <div className='withEllipsis' style={{color:'black'}}>{label}</div>
         : label
       }</label>
       {labelExtra && <div className='labelExtra'>{labelExtra}</div>}

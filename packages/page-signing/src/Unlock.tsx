@@ -66,14 +66,14 @@ function Unlock ({ onClose, onUnlock, pair }: Props): React.ReactElement<Props> 
       size='large'
     >
       <Modal.Content>
-        <Modal.Columns hint={t('This account that will perform the message signing.')}>
+        <Modal.Columns hint={<span style={{ color: 'white' }}>{t('This account that will perform the message signing.')}</span>}>
           <InputAddress
             isDisabled
             label={t('account')}
             value={address}
           />
         </Modal.Columns>
-        <Modal.Columns hint={t('Unlock the account for signing. Once active the signature will be generated based on the content provided.')}>
+        <Modal.Columns hint={<span style={{ color: 'white' }}>{t('Unlock the account for signing. Once active the signature will be generated based on the content provided.')}</span>}>
           <Password
             autoFocus
             isError={!!unlockError}

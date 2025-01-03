@@ -14,7 +14,7 @@ function Label ({ className = '', label, withEllipsis }: Props): React.ReactElem
     <label className={className}>
       {
         withEllipsis
-          ? <div className='withEllipsis'>{label}</div>
+          ? <div className='withEllipsis' style={{color:'black'}}>{label}</div>
           : label
       }
     </label>

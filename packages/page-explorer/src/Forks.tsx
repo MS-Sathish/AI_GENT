@@ -379,7 +379,7 @@ function Forks ({ className }: Props): React.ReactElement<Props> | null {
         </section>
       </SummaryBox>
       <table>
-        <tbody>
+        <tbody style={{color:'#b3b3b3'}}>
           {renderRows(createRows(tree.arr))}
         </tbody>
       </table>

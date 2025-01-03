@@ -22,7 +22,7 @@ function KeyPair ({ address, className = '' }: Props): React.ReactElement<Props>
         className='icon'
         value={address}
       />
-      <div className='name'>
+      <div className='name' style={{color:'#bfbfbf'}}>
         <AccountName value={address} />
       </div>
       <div className='address' style={{color:"white"}}>

@@ -27,14 +27,16 @@ function Tip ({ className, onChange }: Props): React.ReactElement<Props> | null 
   return (
     <Modal.Columns
       className={className}
-      hint={t('Adding an optional tip to the transaction could allow for higher priority, especially when the chain is busy.')}
+      hint={<span style={{ color: 'white' }}>{t('Adding an optional tip to the transaction could allow for higher priority, especially when the chain is busy.')}</span>}
     >
       <Toggle
         className='tipToggle'
         label={
-          showTip
-            ? t('Include an optional tip for faster processing')
-            : t('Do not include a tip for the block author')
+          <span style={{ color: 'white' }}>
+            {showTip
+              ? t('Include an optional tip for faster processing')
+              : t('Do not include a tip for the block author')}
+          </span>
         }
         onChange={setShowTip}
         value={showTip}

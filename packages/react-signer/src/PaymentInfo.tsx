@@ -60,7 +60,11 @@ function PaymentInfo ({ accountId, className = '', extrinsic, isHeader }: Props)
         isHeader={isHeader}
         summary={
           <Trans i18nKey='feesForSubmission'>
-            Fees of <span className='highlight'>{formatBalance(dispatchInfo.partialFee, { withSiFull: true })}</span> will be applied to the submission
+            <span style={{ color: 'white' }}>Fees of </span>
+  <span className='highlight' style={{ color: 'white' }}>
+    {formatBalance(dispatchInfo.partialFee, { withSiFull: true })}
+  </span> 
+  <span style={{ color: 'white' }}> will be applied to the submission</span>
           </Trans>
         }
       />

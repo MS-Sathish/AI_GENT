@@ -32,8 +32,8 @@ function CreateConfirmation ({ address, derivePath, name, pairType, seed }: Prop
       <Modal.Columns
         hint={
           <>
-            <p>{t('We will provide you with a generated backup file after your account is created. As long as you have access to your account you can always download this file later by clicking on "Backup" button from the Accounts section.')}</p>
-            <p>{t('Please make sure to save this file in a secure location as it is required, together with your password, to restore your account.')}</p>
+            <p style={{color:'white'}}>{t('We will provide you with a generated backup file after your account is created. As long as you have access to your account you can always download this file later by clicking on "Backup" button from the Accounts section.')}</p>
+            <p style={{color:'white'}}>{t('Please make sure to save this file in a secure location as it is required, together with your password, to restore your account.')}</p>
           </>
         }
       >
@@ -47,17 +47,17 @@ function CreateConfirmation ({ address, derivePath, name, pairType, seed }: Prop
         )}
         {shortSeed && (
           <Static
-            label={t('partial seed')}
-            value={shortSeed}
+          label={<span style={{ color: 'white' }}>{t('partial seed')}</span>}
+          value={<span style={{ color: 'white' }}>{shortSeed}</span>}
           />
         )}
         <Static
-          label={t('keypair type')}
-          value={pairType}
+          label={<span style={{ color: 'white' }}>{t('keypair type')}</span>}
+          value={<span style={{ color: 'white' }}>{pairType}</span>}
         />
         <Static
-          label={t('derivation path')}
-          value={derivePath || t('<none provided>')}
+          label={<span style={{ color: 'white' }}>{t('derivation path')}</span>}
+          value={<span style={{ color: 'white' }}>{derivePath || t('<none provided>')}</span>}
         />
       </Modal.Columns>
     </Modal.Content>

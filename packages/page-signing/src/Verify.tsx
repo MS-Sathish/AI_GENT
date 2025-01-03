@@ -83,7 +83,7 @@ function Verify ({ className = '' }: Props): React.ReactElement {
           className='full'
           isError={!isValidPk}
           isInput
-          label={t('verify using address')}
+          label={<span style={{ color: 'black' }}>{t('verify using address')}</span>}
           onChange={_onChangeAddress}
         />
       </div>

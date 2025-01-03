@@ -38,7 +38,7 @@ function SetKey ({ allAccounts, className = '', isMine, sudoKey }: Props): React
               <InputAddress
                 className='sudoInputAddress'
                 isInput={true}
-                label={t('sudo key')}
+                label={<span style={{ color: 'black' }}>{t('Sudo key')}</span>}
                 onChange={setSelected}
                 type='all'
                 value={selected}
@@ -47,7 +47,7 @@ function SetKey ({ allAccounts, className = '', isMine, sudoKey }: Props): React
                 accountId={sudoKey}
                 icon='sign-in-alt'
                 isDisabled={!isMine || sudoKey === selected}
-                label={t('Reassign')}
+                label={<span style={{ color: 'white' }}>{t('Reassign')}</span>}
                 params={[selected]}
                 tx={api.tx.sudo.setKey}
               />
@@ -56,7 +56,7 @@ function SetKey ({ allAccounts, className = '', isMine, sudoKey }: Props): React
           : (
             <Labelled
               className='ui--Dropdown sudoLabelled'
-              label={t('sudo key')}
+              label={<span style={{ color: 'black' }}>{t('Sudo key')}</span>}
               withLabel
             >
               <AddressMini value={sudoKey} />

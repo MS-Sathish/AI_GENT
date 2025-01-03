@@ -68,7 +68,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
         <Button.Group>
           <Button
             icon='plus'
-            label={t('Add contact')}
+            label={<span style={{ color: 'white' }}>{t('Add contact')}</span>}
             onClick={toggleCreate}
           />
         </Button.Group>

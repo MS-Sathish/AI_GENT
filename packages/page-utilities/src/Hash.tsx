@@ -59,7 +59,7 @@ function Hash ({ className }: Props): React.ReactElement<Props> {
       <div className='ui--row'>
         <Static
           className='medium'
-          label={t('hex input data')}
+          label={<span style={{ color: 'white' }}>{t('hex input data')}</span>}
           value={
             isHexData
               ? t('Yes')

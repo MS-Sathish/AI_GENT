@@ -352,7 +352,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
         </ItemFile>
       )}
     </Table>
-    <div>
+    <div style={{ color: 'white' }}>
       {t('Note: The file list is cached locally, switching browsers or devices will not keep displaying the original browser information.')}
     </div>
   </StyledMain>;

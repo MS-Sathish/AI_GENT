@@ -49,7 +49,7 @@ function Sudo ({ className, isMine, sudoKey }: Props): React.ReactElement<Props>
             isDisabled={!withWeight}
             isError={weight.eq(BN_ZERO)}
             isZeroable={false}
-            label={t('unchecked weight for this call')}
+            label={<span style={{ color: 'white' }}>{t('unchecked weight for this call')}</span>}
             labelExtra={
               <Toggle
                 className='sudoToggle'

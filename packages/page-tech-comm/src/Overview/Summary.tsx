@@ -19,16 +19,16 @@ function Summary ({ className = '', members, proposalHashes, type }: Props): Rea
 
   return (
     <SummaryBox className={className}>
-      <CardSummary label={t('members')}>
+      <CardSummary label={<span style={{ color: 'white' }}>{t('members')}</span>}>
         {formatNumber(members.length)}
       </CardSummary>
       <section>
-        <CardSummary label={t('proposals')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('proposals')}</span>}>
           {proposalHashes
             ? formatNumber(proposalHashes?.length)
             : <span className='--tmp'>99</span>}
         </CardSummary>
-        <CardSummary label={t('total')}>
+        <CardSummary label={<span style={{ color: 'white' }}>{t('total')}</span>}>
           {proposalCount
             ? formatNumber(proposalCount)
             : <span className='--tmp'>99</span>}

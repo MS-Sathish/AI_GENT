@@ -141,7 +141,7 @@ function Sign ({ className = '' }: Props): React.ReactElement<Props> {
         <div className='ui--row'>
           <Static
             className='medium'
-            label={t('hex input data')}
+            label={<span style={{ color: 'white' }}>{t('hex input data')}</span>}
             value={
               isHexData
                 ? t('Yes')
@@ -202,7 +202,7 @@ function Sign ({ className = '' }: Props): React.ReactElement<Props> {
         <Button
           icon='key'
           isDisabled={!(isUsable && !isLocked)}
-          label={t('Sign message')}
+          label={<span style={{ color: 'white' }}>{t('Sign message')}</span>}
           onClick={_onSign}
         />
       </Button.Group>

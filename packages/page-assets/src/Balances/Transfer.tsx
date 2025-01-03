@@ -50,7 +50,7 @@ function Transfer ({ accountId, assetId, className, minBalance, siFormat: [siDec
             </Modal.Columns>
             <Modal.Columns hint={t('The beneficiary will have access to the transferred asset when the transaction is included in a block.')}>
               <InputAddress
-                label={t('send to address')}
+                label={<span style={{ color: '#a5a5a5' }}>{t('send to address')}</span>}
                 onChange={setRecipientId}
                 type='allPlus'
               />
@@ -73,13 +73,19 @@ function Transfer ({ accountId, assetId, className, minBalance, siFormat: [siDec
                 siSymbol={siSymbol}
               />
             </Modal.Columns>
-            <Modal.Columns hint={t('With the keep-alive option set, the account is protected against removal due to low balances.')}>
+            <Modal.Columns hint={
+    <span style={{ color: 'white' }}>
+      {t('With the keep-alive option set, the account is protected against removal due to low balances.')}
+    </span>
+  }>
               <Toggle
                 className='typeToggle'
                 label={
-                  isProtected
-                    ? t('Transfer with account keep-alive checks')
-                    : t('Normal transfer without keep-alive checks')
+                  <span style={{ color: 'white' }}>
+                    {isProtected
+                      ? t('Transfer with account keep-alive checks')
+                      : t('Normal transfer without keep-alive checks')}
+                  </span>
                 }
                 onChange={setIsProtected}
                 value={isProtected}

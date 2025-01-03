@@ -25,7 +25,7 @@ function KeyPair ({ address, className = '' }: Props): React.ReactElement<Props>
       <div className='name'>
         <AccountName value={address} />
       </div>
-      <div className='address'>
+      <div className='address' style={{color:"white"}}>
         {address}
       </div>
     </StyledDiv>

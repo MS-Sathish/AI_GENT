@@ -97,7 +97,7 @@ function Flags ({ className = '', flags: { isCouncil, isDevelopment, isExternal,
         {isSudo && (
           <Flag
             color='pink'
-            label={t('Sudo key')}
+            label={<span style={{ color: ' #cccccc' }}>{t('Sudo key')}</span>}
           />
         )}
       </div>

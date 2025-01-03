@@ -27,8 +27,11 @@ function Verify ({ className = '' }: Props): React.ReactElement {
   const [{ data, isHexData }, setData] = useState<{ data: string; isHexData: boolean }>({ data: '', isHexData: false });
   const [{ isValidPk, publicKey }, setPublicKey] = useState<{ isValidPk: boolean; publicKey: Uint8Array | null }>({ isValidPk: false, publicKey: null });
   const [{ isValidSignature, signature }, setSignature] = useState<{ isValidSignature: boolean; signature: string }>({ isValidSignature: false, signature: '' });
-  const [cryptoOptions] = useState([{ text: t('Crypto not detected'), value: 'unknown' }].concat(settings.availableCryptos as { text: string; value: string }[]));
-
+  // const [cryptoOptions] = useState([{ text: t('Crypto not detected'), value: 'unknown' }].concat(settings.availableCryptos as { text: string; value: string }[]));
+  const [cryptoOptions] = useState([
+    { text: <span style={{ color: '#cccccc' }}>{t('Crypto not detected')}</span>, value: 'unknown' },
+    ...settings.availableCryptos as { text: string; value: string }[]
+  ]);
   useEffect((): void => {
     let cryptoType: CryptoTypes = 'unknown';
     let isValid = isValidPk && isValidSignature;
@@ -113,16 +116,16 @@ function Verify ({ className = '' }: Props): React.ReactElement {
         <Dropdown
           defaultValue={cryptoType}
           isDisabled
-          label={t('signature crypto type')}
+          label={<span style={{ color: 'white' }}>{t('signature crypto type')}</span>}
           options={cryptoOptions}
         />
         <Static
           className='medium'
-          label={t('hex input data')}
+          label={<span style={{ color: 'white' }}>{t('hex input data')}</span>}
           value={
-            isHexData
-              ? t('Yes')
-              : t('No')
+            <span style={{ color: '#cccccc' }}>
+              {isHexData ? t('Yes') : t('No')}
+            </span>
           }
         />
       </div>

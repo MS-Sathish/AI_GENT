@@ -119,7 +119,7 @@ function QrModal ({ className = '', onClose, onStatusChange }: Props): React.Rea
   return (
     <StyledModal
       className={className}
-      header={t('Add account via Qr')}
+      header={<span style={{ color: 'white' }}>{t('Add account via Qr')}</span>}
       onClose={onClose}
       size='large'
     >
